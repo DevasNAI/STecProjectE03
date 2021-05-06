@@ -11,9 +11,11 @@ MusicaQuiereSerMiNovia.py
 
 -Apareceran unos lentes sobre los ojos de la persona que aparezca en cuadro.
 
--Se aplicará un filtro de color rojizo a la imágen obtenida por la camara.
+-Se aplicará un filtro de color rojizo a la imágen obtenida por la cámara.
 
--Al moemnto de cerrar el programa con la tecla "Esc", estas funcoines dejaran de ejecutarse.
+-Se mostrará la imagen de kieres.png
+
+-Al momento de cerrar el programa con la tecla "Esc", estas funcoines dejaran de ejecutarse.
 
 ## Recursos
 *Se necesita instalar la librería OpenCV (cv2)
