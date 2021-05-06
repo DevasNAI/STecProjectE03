@@ -42,11 +42,16 @@ if __name__ == '__main__':
             # para detectar objetos de diferentes tamaños
 
             for (x,y,w,h) in faces:
-            if h> 0 and w>0:
-                # tamaños para los lentes
-                lentes_symin = int(y+ 1.5 * h/5)
-                lentes_symax = int(y + 2.5 * h /5)
-                sh_glass = lentes_symax - lentes_symin
+                if h> 0 and w>0:
+                    # tamaños para los lentes
+                    lentes_symin = int(y+ 1.5 * h/5)
+                    lentes_symax = int(y + 2.5 * h /5)
+                    sh_glass = lentes_symax - lentes_symin
+
+                    lentes_ori = img [lentes_symin:lentes_symax, x:x+w]
+                    lentes_mostrar = cv2.resize(lentes_var, (w, sh_glass), interpolation= cv2.INTER_CUBIC)
+                    transparentOverlay(lentes_ori, lentes_mostrar)
+
 
         if not success:
             break
