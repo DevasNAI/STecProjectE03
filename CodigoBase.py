@@ -16,6 +16,9 @@ if __name__ == '__main__':
 
 
     cap = cv2.VideoCapture(args["cameraSource"]) #0 local o primary camera
+    cascada = cv2.CascadeClassifier('face.xml') # método eficaz para la detección de objetos (cara)
+    lentes_var = cv2.imread("lentes.png" , -1) # leer la imagen de los lentes que se van a mostrar 
+
     while cap.isOpened():
         
         #BGR image feed from camera
