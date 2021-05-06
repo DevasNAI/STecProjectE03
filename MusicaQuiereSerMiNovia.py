@@ -9,8 +9,6 @@ mixer.music.load("Quieres_Ser_Mi_Novia.mp3")
 mixer.music.set_volume(0.7)
 
 if __name__ == '__main__':
-    tiempoInicio = time.time()
-
     parser = argparse.ArgumentParser(description='Camera visualization')
 
     ### Positional arguments
@@ -21,6 +19,8 @@ if __name__ == '__main__':
 
 
     cap = cv2.VideoCapture(args["cameraSource"]) #0 local o primary camera
+    #The song plays
+    mixer.music.play()
     while cap.isOpened():
         
         #BGR image feed from camera
@@ -41,9 +41,6 @@ if __name__ == '__main__':
 
     cap.release()
     cv2.destroyAllWindows()
-
-
-    print('Script took %f seconds.' % (time.time() - tiempoInicio))
 
 
 
