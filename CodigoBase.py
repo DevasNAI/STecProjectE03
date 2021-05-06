@@ -68,10 +68,10 @@ if __name__ == '__main__':
     mixer.music.play()
     
     #   Cambia el tamaño de la imagen.
-    img = redimension(imagen, alto = 230)
+    watermark = redimension(imagen, alto = 230)
 
     #   Cambia la estructura de color la imagen 
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2BGRA)
+    watermark = cv2.cvtColor(img, cv2.COLOR_BGR2BGRA)
     
     while cap.isOpened():
         
