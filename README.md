@@ -29,5 +29,6 @@ https://www.youtube.com/watch?v=hcyAlrMEMec&list=WL
 
 https://github.com/savagecarol/snapchat_opencv
 
-https://learnopencv.com/photoshop-filters-in-opencv/
+https://www.youtube.com/watch?v=xn9egHOQ16k
 
+https://learnopencv.com/photoshop-filters-in-opencv/
