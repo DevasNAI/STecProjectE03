@@ -128,8 +128,10 @@ if __name__ == '__main__':
         if img is None:
             break
 
+        cv2.addWeighted(img, .65, frame, .8, 0, frame)
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGRA2BGR)
         
-        cv2.imshow("Video webcam", img)
+        cv2.imshow("Video webcam", frame)
 
         k = cv2.waitKey(10)
         if k==27:
