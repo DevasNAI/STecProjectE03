@@ -22,6 +22,31 @@ def transparenteOverlay(src, overlay , pos = (0,0)  , scale = 1):
             src[x+i][y+j] = alpha * overlay[i][j][:3] + (1-alpha) * src[x+i][y+j]
     return src
 
+def redimension(imagen, ancho = None, alto = None, interpolacion = cv2.INTER_AREA):
+    """
+        string imagen     | Localización de la imagen a mostrar.
+        None ancho        | Longitud horizontal de la imagen, se convierte en entero.
+        None alto         | Longitud vertical de la imagen, se convierte en entero.
+        cv2 interpolacion | Interpolacion bilineal con la imagen. Permanece default.
+
+        Esta función recibe una imagen y un tamaño a a justar, posteriormente
+        modifica el tamaño de la imagen a las dimensiones deseadas.
+    
+    """
+    (y, x) = imagen.shape[:2] 
+    dimension = None
+
+    if ancho is None and alto is None:
+        return imagen
+    if ancho is None:
+        r = alto /float(y)
+        dimension = (int(x * r), alto)
+    else:
+        r = ancho /float(x)
+        dimension = (x, int(y * r))
+
+    return cv2.resize(imagen, dimension, interpolation = interpolacion)
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Camera visualization')
 
@@ -87,4 +112,4 @@ if __name__ == '__main__':
     cap.release()
     cv2.destroyAllWindows()
 
-# Basado de: https://www.youtube.com/watch?v=xn9egHOQ16k
+
