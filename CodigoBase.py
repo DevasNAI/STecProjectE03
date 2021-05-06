@@ -71,7 +71,7 @@ if __name__ == '__main__':
     watermark = redimension(imagen, alto = 230)
 
     #   Cambia la estructura de color la imagen 
-    watermark = cv2.cvtColor(img, cv2.COLOR_BGR2BGRA)
+    watermark = cv2.cvtColor(watermark, cv2.COLOR_BGR2BGRA)
     
     while cap.isOpened():
         
