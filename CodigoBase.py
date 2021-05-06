@@ -101,7 +101,7 @@ if __name__ == '__main__':
                         overlay[70+i, 30+j] = watermark[i, j]
                         
             #   Agrega la imagen con el video en vivo.
-            cv2.addWeighted(overlay, .65, frame, .8, 0, frame)
+            cv2.addWeighted(overlay, .3, frame, .8, 0, frame)
             frame = cv2.cvtColor(frame, cv2.COLOR_BGRA2BGR)
 
             
