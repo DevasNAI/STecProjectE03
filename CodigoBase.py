@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
         success,img = cap.read()    
         if success:
-            img = cv2.cvtColor(res, cv2.COLOR_BGR2RGB) 
+            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) 
             #convertimos la imagen a una matriz RGB
             img = np.array(img, dtype=np.float64)
             img = cv2.transform(img, np.matrix([[0.400, 0.130, 0.200],[0.100, 0.200, 0.130],[0.140, 0.180, 0.180]])) #seleccionamos los valores RGB para dar una tonalidad rojiza a la imagen
