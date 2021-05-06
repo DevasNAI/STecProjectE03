@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
                     lentes_ori = img [lentes_symin:lentes_symax, x:x+w]
                     lentes_mostrar = cv2.resize(lentes_var, (w, sh_glass), interpolation= cv2.INTER_CUBIC)
-                    transparentOverlay(lentes_ori, lentes_mostrar)
+                    transparenteOverlay(lentes_ori, lentes_mostrar)
 
 
         if not success:
