@@ -22,6 +22,9 @@ def transparenteOverlay(src, overlay , pos = (0,0)  , scale = 1):
             src[x+i][y+j] = alpha * overlay[i][j][:3] + (1-alpha) * src[x+i][y+j]
     return src
 
+# Lee la imagen
+imagen = cv2.imread('kieres.png', -1)
+
 def redimension(imagen, ancho = None, alto = None, interpolacion = cv2.INTER_AREA):
     """
         string imagen     | Localización de la imagen a mostrar.
@@ -63,6 +66,12 @@ if __name__ == '__main__':
     lentes_var = cv2.imread("lentes.png" , -1) # leer la imagen de los lentes que se van a mostrar 
     #The song plays
     mixer.music.play()
+    
+    #   Cambia el tamaño de la imagen.
+    img = redimension(imagen, alto = 230)
+
+    #   Cambia la estructura de color la imagen 
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2BGRA)
     
     while cap.isOpened():
         
