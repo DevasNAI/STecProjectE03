@@ -21,12 +21,14 @@ if __name__ == '__main__':
         
         #BGR image feed from camera
         success,img = cap.read()   
-        img = cv2.cvtColor(res, cv2.COLOR_BGR2RGB) # converting to RGB as sepia matrix is for RGB
-        img = np.array(res, dtype=np.float64)
-        img = cv2.transform(res, np.matrix([[0.400, 0.130, 0.200],[0.100, 0.200, 0.130],[0.140, 0.180, 0.180]]))
-        img[np.where(res > 255)] = 255 # clipping values greater than 255 to 255
-        img = np.array(res, dtype=np.uint8)
-        img = cv2.cvtColor(res, cv2.COLOR_RGB2BGR)
+        img = cv2.cvtColor(res, cv2.COLOR_BGR2RGB) 
+        
+        #convertimos la imagen a una matriz RGB
+        img = np.array(img, dtype=np.float64)
+        img = cv2.transform(img, np.matrix([[0.400, 0.130, 0.200],[0.100, 0.200, 0.130],[0.140, 0.180, 0.180]])) #seleccionamos los valores RGB para dar una tonalidad rojiza a la imagen
+        img[np.where(img > 255)] = 255 # cualquier valor mayor a 255, igualarlo a 255
+        img = np.array(img, dtype=np.uint8)
+        img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
         
         if not success:
             break
