@@ -13,3 +13,7 @@ Se aplicará un filtro de color rojizo a la imágen obtenida por la camara.
 ## Recursos
 Se necesita instalar la libreria numpy
 
+
+## Referencias
+https://learnopencv.com/photoshop-filters-in-opencv/
+
