@@ -1,5 +1,6 @@
 import cv2
 import argparse
+import numpy as np
 from pygame import mixer
 
 #Song load and volume settings
@@ -41,8 +42,17 @@ if __name__ == '__main__':
     while cap.isOpened():
         
         #BGR image feed from camera
+
         success,img = cap.read()    
         if success:
+            img = cv2.cvtColor(res, cv2.COLOR_BGR2RGB) 
+            #convertimos la imagen a una matriz RGB
+            img = np.array(img, dtype=np.float64)
+            img = cv2.transform(img, np.matrix([[0.400, 0.130, 0.200],[0.100, 0.200, 0.130],[0.140, 0.180, 0.180]])) #seleccionamos los valores RGB para dar una tonalidad rojiza a la imagen
+            img[np.where(img > 255)] = 255 # cualquier valor mayor a 255, igualarlo a 255
+            img = np.array(img, dtype=np.uint8)
+            img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+        
             gris = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) # convirtiendo de color a grises
             faces =cascada.detectMultiScale(gris ,1.3 , 5 , 0 , minSize=(120,120) , maxSize=(350,350)) 
             # para detectar objetos de diferentes tamaños
