@@ -18,3 +18,4 @@ Se necesita instalar la librería "mixer"
 ## Referencias
 https://www.youtube.com/watch?v=hcyAlrMEMec&list=WL
 https://github.com/savagecarol/snapchat_opencv
+https://www.youtube.com/watch?v=xn9egHOQ16k
