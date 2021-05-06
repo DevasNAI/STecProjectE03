@@ -36,7 +36,12 @@ if __name__ == '__main__':
         
         #BGR image feed from camera
         success,img = cap.read()    
-        
+        if success:
+            gris = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY) # convirtiendo de color a grises
+            faces =cascada.detectMultiScale(gris ,1.3 , 5 , 0 , minSize=(120,120) , maxSize=(350,350)) 
+            # para detectar objetos de diferentes tamaños
+
+
         if not success:
             break
         if img is None:
