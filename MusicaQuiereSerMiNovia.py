@@ -43,4 +43,4 @@ if __name__ == '__main__':
     cap.release()
     cv2.destroyAllWindows()
 
-# Basado en: https://www.youtube.com/watch?v=xn9egHOQ16k
+# Basado de: https://www.youtube.com/watch?v=xn9egHOQ16k
