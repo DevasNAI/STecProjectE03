@@ -36,6 +36,8 @@ if __name__ == '__main__':
 
         k = cv2.waitKey(10)
         if k==27:
+            #The song stops
+            mixer.music.stop()
             break
 
 
