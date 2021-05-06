@@ -101,7 +101,7 @@ if __name__ == '__main__':
                         overlay[70+i, 30+j] = watermark[i, j]
                         
             #   Agrega la imagen con el video en vivo.
-            cv2.addWeighted(overlay, .3, frame, .8, 0, frame)
+            cv2.addWeighted(overlay, .7, frame, .8, 0, frame)
             frame = cv2.cvtColor(frame, cv2.COLOR_BGRA2BGR)
 
             
@@ -128,7 +128,7 @@ if __name__ == '__main__':
         if img is None:
             break
 
-        cv2.addWeighted(img, .65, frame, .8, 0, frame)
+        cv2.addWeighted(img, .7, frame, 1, 0, frame)
         frame = cv2.cvtColor(frame, cv2.COLOR_BGRA2BGR)
         
         cv2.imshow("Video webcam", frame)
