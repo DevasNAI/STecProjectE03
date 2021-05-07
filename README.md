@@ -1,6 +1,8 @@
 # STecProjectE03
 ## Descripción
 En este proyecto se realiza una aplicación de un filtro en una videowebcam, al cual también se le agrega otro filtro de anteojos que siguen a una cara y el mismo resultado muestra una imagen mientras está la cámara en vivo. Durante todo ese proceso se reproduce una canción.
+Se hizo uso principalmente de la librería openCV para cada una de las actividades que se muestran en la cámara. Todos los filtros son aplicados en un mismo momento.
+El objetivo de este programa es mostrar algunos posibles usos de la librería openCV, el cual en nuestro caso fue hacer una simulación de cómo se vería un filtro como los que son utilizados en las redes sociales.
 
 ## Contenidos
 - CodigoBase.py: Código principal del proyecto
