@@ -1,7 +1,6 @@
 # STecProjectE03
 ## Descripción
-Repositorio donde trabaja el equipo 3 en la semana Tec TC1002S.2
-
+En este proyecto se realiza una aplicación de un filtro en una videowebcam, al cual también se le agrega otro filtro de anteojos que siguen a una cara y el mismo resultado muestra una imagen mientras está la cámara en vivo. Durante todo ese proceso se reproduce una canción.
 
 ## Contenidos
 - CodigoBase.py: Código principal del proyecto
