@@ -4,7 +4,12 @@ Repositorio donde trabaja el equipo 3 en la semana Tec TC1002S.2
 
 
 ## Contenidos
-MusicaQuiereSerMiNovia.py
+- CodigoBase.py: Código principal del proyecto
+
+- lentes.png: Archivo png de los lentes que se colocan sobre el usuario
+
+- kieres.png: Archivo png del meme
+
 
 ## Funcionalidad
 -Este programa va a abrir la cámara del computador y va a reproducir la canción Quieres_Ser_Mi_Novia.mp3 en ese momento.
@@ -16,6 +21,7 @@ MusicaQuiereSerMiNovia.py
 -Se mostrará la imagen de kieres.png
 
 -Al momento de cerrar el programa con la tecla "Esc", estas funcoines dejaran de ejecutarse.
+
 
 ## Recursos
 *Se necesita instalar la librería OpenCV (cv2)
