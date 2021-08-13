@@ -44,7 +44,7 @@ from pygame import mixer
 ##############################################################
 
 
-
+#Se definen las funciones de musica() , transparenteOverlay() y redimension()
 def musica():
     """
         Esta función inicializa el mixer de la librería pygame
@@ -79,7 +79,6 @@ def transparenteOverlay(src, overlay , pos = (0,0)  , scale = 1):
             alpha = float(overlay[i][j][3]/255) # leer el canal alfa
             src[x+i][y+j] = alpha * overlay[i][j][:3] + (1-alpha) * src[x+i][y+j]
     return src
-
 
 
 def redimension(imagen, ancho = None, alto = None, interpolacion = cv2.INTER_AREA):
@@ -163,12 +162,12 @@ if __name__ == '__main__':
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB) 
             #convertimos la imagen a una matriz RGB
             frame = np.array(frame, dtype=np.float64)
-            frame = cv2.transform(frame, np.matrix([[0.400, 0.130, 0.200],[0.100, 0.200, 0.130],[0.140, 0.180, 0.180]])) #seleccionamos los valores RGB para dar una tonalidad rojiza a la imagen
+            frame = cv2.transform(frame, np.matrix([[0.400, 0.130, 0.200],[0.100, 0.200, 0.130],
+                                                    [0.140, 0.180, 0.180]])) #seleccionamos los valores RGB para dar una tonalidad rojiza a la imagen
             frame[np.where(frame > 255)] = 255 # cualquier valor mayor a 255, igualarlo a 255
             frame = np.array(frame, dtype=np.uint8)
             frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
         
-
             
             gris = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY) # Convirtiendo de color a grises
             faces =cascada.detectMultiScale(gris ,1.3 , 5 , 0 , minSize=(120,120) , maxSize=(350,350)) 
