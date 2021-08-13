@@ -54,7 +54,7 @@ def musica():
     mixer.init()
     #   Se define volumen y carga canción.
     mixer.music.load("Quieres_Ser_Mi_Novia.mp3")
-    mixer.music.set_volume(0.7)
+    mixer.music.set_volume(0.1)
 
 def transparenteOverlay(src, overlay , pos = (0,0)  , scale = 1):
     """
@@ -204,5 +204,7 @@ if __name__ == '__main__':
     #   Cierra las ventanas y termina el programa.
     cap.release()
     cv2.destroyAllWindows()
+
+    #Hola
 
 
